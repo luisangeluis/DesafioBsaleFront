@@ -18,41 +18,41 @@
 
 <body class="d-flex flex-column justify-content-between">
   <!-- Navbar -->
-  <header>
-    <nav class="navbar navbar-expand-lg bg-light">
+  <header class="header position-fixed">
+    <nav class="navbar navbar-expand-lg py-4 py-lg-3">
       <div class="container">
-        <a class="navbar-brand" href="#">Bsale Test</a>
+        <a class="navbar-brand color-red fw-bolder fs-2" href="/">Bsale Test</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Store</a>
-            </li>
-          </ul>
-          <form class="d-flex flex-grow-1" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+          <form class="d-flex flex-grow-1 position-relative my-3" role="search" id="search-form"
+            onsubmit="event.preventDefault();">
+            <div class="input-group">
+              <span class="input-group-text bg-dark text-white" id="basic-addon1">Store</span>
+              <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" id="search-term">
+              <button class="btn fw-bold" type="submit" onclick="getProductsByTerm();">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
           </form>
-          <ul class="navbar-nav">
+          <ul class="navbar-nav mx-lg-2 fs-3">
             <li class="nav-item">
               <a class="nav-link " aria-current="page" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
             </li>
           </ul>
-
         </div>
       </div>
     </nav>
   </header>
   <!-- End Navbar -->
-  <main class="my-3 my-md-4 flex-grow-1">
+  <main class="main  flex-grow-1">
     <div class="container">
       <div class="row">
         <section class="col-md-3 bg-gray">
           <ul class="list-group categories-list">
-           
+
           </ul>
         </section>
         <section class="col-md-9">

@@ -1,6 +1,102 @@
-html{
+html {
   min-height: 100%;
 }
-body{
+
+body {
   min-height: 100vh;
+  background-color: #93c4ef;
+}
+
+.color-red {
+  color: #a52026;
+
+
+}
+
+/*********/
+/* header */
+/*********/
+.header {
+  top: 0;
+  left: 0;
+  right: 0;
+  /* bottom: 0; */
+  z-index: 3;
+
+}
+
+.navbar {
+  background-color: #393d40;
+
+}
+
+/*********/
+/*End header */
+/*********/
+
+/*********/
+/*Main */
+/*********/
+.main {
+  margin-top: 10rem;
+
+}
+
+.categories-list .list-group-item.active {
+  background-color: #0268a6;
+}
+
+.card{
+  height: 25rem;
+}
+.card img{
+  height: 50%;
+  width: 100%;
+}
+
+/*********/
+/*End Main */
+/*********/
+
+/*********/
+/* Form */
+/*********/
+form .alert {
+  left: 0;
+  top: 3em;
+  z-index: 10000;
+  opacity: .99;
+  color: white;
+  background-color: #a52026;
+}
+
+form .btn {
+  background-color: #0268a6;
+}
+
+/*********/
+/* End Form */
+/*********/
+
+/*********/
+/* Categories list */
+/*********/
+.categories-list .list-group-item {
+  padding: 0;
+
+}
+
+/*********/
+/* End Categories list */
+/*********/
+
+@media screen and (min-width:768px){
+  body{
+    /* color: red; */
+    /* background-color: black; */
+  }
+  .card{
+    height: 22rem;
+  }
+
 }
