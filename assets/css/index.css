@@ -90,6 +90,37 @@ form .btn {
 /* End Categories list */
 /*********/
 
+/*********/
+/* Footer */
+/*********/
+.footer{
+  min-height: 4rem;
+}
+/*********/
+/* End Footer */
+/*********/
+/* .spinner-wrap{
+  background-color: red;
+  min-height: 100vh;
+  min-width: 100%;
+  /* z-index: 10000; 
+  opacity: .1;
+
+} */
+.spinner-grow{
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  z-index: 10000;
+  /* opacity: 0; */
+  visibility:hidden;
+  background-color: silver;
+}
+
 @media screen and (min-width:768px){
   body{
     /* color: red; */
