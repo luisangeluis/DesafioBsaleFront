@@ -1,16 +1,16 @@
+//Renders the products on cards
 function printProducts(products, container) {
-  // console.log(products)
   let html = '';
   products.forEach(product => {
     html += `<div class="col-md-6 col-lg-4 my-2">
                 <div class="card">
-                  <img src="${product.urlImage}" class="img-fluid card-img-top" alt="${product.name}">
-                  <div class="card-body d-flex flex-column justify-content-end">
-                  
-                    <h5 class="card-title">${product.name}</h5>
-                    <h6 class="card-subtitle mb-2 fw-bolder text-primary">Price: $${product.price}</h6>
-
-                    <p class="card-text text-muted">Discount: ${product.discount}%</p>
+                  <img src="${product.urlImage ? product.urlImage : './assets/images/image-not-available.jpg'}" class="img-fluid card-img-top" alt="${product.name}">
+                  <div class="card-body d-flex flex-column justify-content-end alig-items-center">
+                    ${product.discount==0?'':`<p class="card-text color-red fw-bold">Discount: ${product.discount}%</p>`}
+                    
+                      <h5 class="card-title">${product.name}</h5>
+                      <h6 class="card-subtitle mb-2 fw-bolder text-primary">Price: $${product.price}</h6>
+                    
                     <div class="text-end"></div>
                   </div>
                 </div>
@@ -20,6 +20,7 @@ function printProducts(products, container) {
   container.innerHTML = html;
 }
 
+//Checks the term to search and returns it, otherwise it sends an alert.
 const reviewTerm = () => {
   const form = document.querySelector('#search-form');
   const inputForm =document.querySelector('#search-term');
@@ -39,6 +40,7 @@ const reviewTerm = () => {
 
 }
 
+//Sends an alert.
 const createAlert=(message)=>{
     const alert = document.createElement('div')
     alert.classList.add('alert','alert-secondary','position-absolute')
@@ -46,7 +48,6 @@ const createAlert=(message)=>{
 
     return alert;
 }
-
 
 export { printProducts, reviewTerm }
 
