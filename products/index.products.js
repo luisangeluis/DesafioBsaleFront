@@ -1,7 +1,6 @@
 import { printProducts, reviewTerm } from './ui.products.js'
 
 const productsContainer = document.querySelector('.products-container');
-// const loader = document.querySelector('.spinner-grow');
 const loader2 = document.querySelector('.spinner-wrap');
 const baseUrl = 'https://desafiobsaleback-production.up.railway.app'
 

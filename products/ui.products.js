@@ -3,15 +3,12 @@ function printProducts(products, container) {
   let html = '';
   products.forEach(product => {
     html += `<div class="col-md-6 col-lg-4 my-2">
-                <div class="card">
+                <div class="card box-shadow-one p-1 p-md-2">
                   <img src="${product.urlImage ? product.urlImage : './assets/images/image-not-available.jpg'}" class="img-fluid card-img-top" alt="${product.name}">
                   <div class="card-body d-flex flex-column justify-content-end alig-items-center">
-                    ${product.discount==0?'':`<p class="card-text color-red fw-bold">Discount: ${product.discount}%</p>`}
-                    
-                      <h5 class="card-title">${product.name}</h5>
-                      <h6 class="card-subtitle mb-2 fw-bolder text-primary">Price: $${product.price}</h6>
-                    
-                    <div class="text-end"></div>
+                    ${product.discount==0?'':`<p class="card-text text-shadow-one fw-bolder m-0">Discount: ${product.discount}%</p>`}
+                    <h5 class="card-title">${product.name}</h5>
+                    <h6 class="card-subtitle mb-2 fw-bolder text-primary">Price: $${product.price}</h6>
                   </div>
                 </div>
               </div>`
