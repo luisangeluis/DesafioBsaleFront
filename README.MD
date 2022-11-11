@@ -6,8 +6,8 @@ Se puede consultar productos por su nombre y arrojara coincidencias parecidas.
 Se puede filtrar los productos por su categoria.
 
 ## Link del deploy
-Proyecto en [Netlify](https://wonderful-gecko-eea1f2.netlify.app/ "Proyecto en netlify") <br />
-Proyecto en [Github](https://github.com/luisangeluis/DesafioBsaleFront "Proyecto en github")
+- Proyecto en [Netlify](https://wonderful-gecko-eea1f2.netlify.app/ "Proyecto en netlify") <br />
+- Proyecto en [Github](https://github.com/luisangeluis/DesafioBsaleFront "Proyecto en github")
 
 
 ## Frameworks
