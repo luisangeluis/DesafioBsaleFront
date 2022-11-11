@@ -1,4 +1,4 @@
-# Desafio bsale.
+# Desafio bsale ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 ## Introduccion
 
 Pagina realizada para compra de productos, el front end se realizo con vanilla js.
@@ -45,6 +45,10 @@ Se puede filtrar los productos por su categoria.
 <img src="./assets/images/vistasBsale/vista-4_bsale.png" width="1000" height="600" alt="Vista de alertas"/>
 
 ![Vista de alertas mobile.](./assets/images/vistasBsale/vista-4-movil_bsale.png "Vista de alertas mobile.")
+
+## Contribución
+
+Puedes crear un pull request al proyecto.
 
 ## Licencia.
 
