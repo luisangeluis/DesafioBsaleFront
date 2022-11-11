@@ -1,10 +1,18 @@
+//Elementos ui para renderizar elementos en el DOM de forma dinamica.
 import { printProducts, reviewTerm } from './ui.products.js'
 
+//Contenedor para renderizar los productos
 const productsContainer = document.querySelector('.products-container');
+
+//Contenedor para renderizar la pantalla de carga.
 const loader2 = document.querySelector('.spinner-wrap');
+
+//Url base para peticiones.
 const baseUrl = 'https://desafiobsaleback-production.up.railway.app'
 
-//Get all Products
+/**
+ * Obtiene todos los productos de la bd.
+ */
 const getProducts = () => {
   loader2.classList.add('d-block')
 
@@ -17,7 +25,10 @@ const getProducts = () => {
     .finally(() =>loader2.classList.remove('d-block'))
 }
 
-//Get products by their category id
+/**
+ * Esta funcion obtiene todos los productos de una categoria en especifico.
+ * @param {Integer} id Obtiene el id de una categoria.
+ */
 const getProductsByCategoryId = (id) => {
   // loader.style.visibility = 'visible';
   loader2.classList.add('d-block')
@@ -32,8 +43,10 @@ const getProductsByCategoryId = (id) => {
     .finally(() =>loader2.classList.remove('d-block'))
 }
 
-
-//Get products by name similar to the term.
+/**
+ * Esta funcion busca un producto por su nombre y devuelve los resultados
+ * parecidos al nombre ingresado.
+ */
 const getProductsByTerm = () => {
   const term = reviewTerm()
 

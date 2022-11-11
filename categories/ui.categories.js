@@ -1,5 +1,9 @@
-
-//Display categories using li tag
+/**
+ * Esta funcion imprime la respuesta de las categorias y las muestra en la pagina en la etiqueta
+ * del DOM que le indiques.
+ * @param {Object} categories Recibe un objeto con las categorias obtenidas de la bd.
+ * @param {Object} container  Recibe un element del DOM.
+ */
 function printCategories(categories, container) {
   let html = `<li class="list-group-item active d-flex">
                 <button class="btn fw-bolder flex-grow-1" onclick="getProducts()">
@@ -18,6 +22,11 @@ function printCategories(categories, container) {
 }
 
 //Category list animation
+/**
+ * Esta funcion agrega el evento click a una coleccion de elementos del DOM
+ * esto para agregar la clase active al elemento seleccionado y darle una animacion.
+ * @param {Object} categoriesList Recibe una colección de elementos del DOM.
+ */
 const toggleCategories = (categoriesList) => {
   categoriesList.addEventListener('click', (e) => {
     const categoriesItems = categoriesList.children;
