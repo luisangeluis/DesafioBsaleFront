@@ -12,7 +12,7 @@ function printProducts(products, container) {
                   <div class="card-body d-flex flex-column justify-content-end alig-items-center">
                     ${product.discount==0?'':`<p class="card-text text-shadow-one fw-bolder m-0">Discount: ${product.discount}%</p>`}
                     <h5 class="card-title">${product.name}</h5>
-                    <h6 class="card-subtitle mb-2 fw-bolder text-primary">Price: $${product.price}</h6>
+                    <h6 class="card-subtitle mb-2 fw-bolder color-blue">Price: $${product.price}</h6>
                   </div>
                 </div>
               </div>`
@@ -52,7 +52,7 @@ const reviewTerm = () => {
  */
 const createAlert=(message)=>{
     const alert = document.createElement('div')
-    alert.classList.add('alert','alert-secondary','position-absolute')
+    alert.classList.add('alert','bg-red','position-absolute','fw-bold')
     alert.textContent = message;
 
     return alert;

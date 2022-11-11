@@ -4,10 +4,9 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: #93c4ef;
-  /* background-color: #8e9cb2; */
-  background-color: #c8c5e7;
+  background-color: #920d2f05;
 }
+
 
 /********************/
 /* Generic classes */
@@ -16,13 +15,21 @@ body {
   color: #a52026;
 }
 
+.color-blue{
+  color: #0268a6;
+}
+
+.bg-red{
+  background-color: #a52026;
+}
+
 .alert{
   transition: all ease-in-out 500ms;
 }
 
 .text-shadow-one{
   color: #A52026;
-  text-shadow: 1px 1px 3px #000000;
+  text-shadow: 1px 1px 2px #000000;
 }
 
 .box-shadow-one{
@@ -63,15 +70,23 @@ body {
 }
 
 .categories-list .list-group-item.active {
-  background-color: #0268a6;
+  background-color: #57000035;
+  
 }
 
 .card {
   height: 23rem;
   transition: scale ease-out 300ms;
   width: 100%;
-  background-color: #0268a625;
+  background-color: #57000035;
   border-radius: 10px;
+}
+
+.card:hover{
+  scale: 1.01;
+  box-shadow: #a52026 solid 1px;
+  border:.3 groove #212529;
+
 }
 .card-body{
   height: 50%;
@@ -79,16 +94,13 @@ body {
   align-content: space-between;
   
 }
-
-.card:hover{
-  scale: 1.02;
-  box-shadow: #a52026 solid 5px;
-  border:.3 groove #212529;
-
-}
 .card img {
   height: 50%;
   width: 100%;
+}
+
+.list-group-item.active{
+  border:none;
 }
 
 /********************/
@@ -158,7 +170,6 @@ form .btn {
   width: 150px;
   height: 150px;
   z-index: 3;
-
   background-color: silver;
 }
 
