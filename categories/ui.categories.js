@@ -43,5 +43,10 @@ const toggleCategories = (categoriesList) => {
   })
 }
 
+const removeClass = (elements, theClass) => {
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].classList.remove(theClass)
+  }
+}
 
-export { printCategories, toggleCategories }
+export { printCategories, toggleCategories, removeClass }

@@ -1,8 +1,9 @@
 //Elementos ui para renderizar elementos en el DOM de forma dinamica.
-import { printProducts, reviewTerm } from './ui.products.js'
-
+import { printProducts, reviewTerm } from './ui.products.js';
+import { removeClass } from '../categories/ui.categories.js';
 //Contenedor para renderizar los productos
 const productsContainer = document.querySelector('.products-container');
+const categoriesList = document.querySelector('.categories-list');
 
 //Contenedor para renderizar la pantalla de carga.
 const loader2 = document.querySelector('.spinner-wrap');
@@ -22,7 +23,7 @@ const getProducts = () => {
       printProducts(data, productsContainer);
     })
     .catch(error => console.log(error.message))
-    .finally(() =>loader2.classList.remove('d-block'))
+    .finally(() => loader2.classList.remove('d-block'))
 }
 
 /**
@@ -40,7 +41,7 @@ const getProductsByCategoryId = (id) => {
       printProducts(data, productsContainer);
     })
     .catch(error => console.log(error.message))
-    .finally(() =>loader2.classList.remove('d-block'))
+    .finally(() => loader2.classList.remove('d-block'))
 }
 
 /**
@@ -58,12 +59,15 @@ const getProductsByTerm = () => {
       .then(res => {
         let data = res.data.response
 
-        if (data.length) printProducts(data, productsContainer);
+        if (data.length) 
+          printProducts(data, productsContainer);
         else productsContainer.innerHTML = '<h3 class="fw-bold">No products found.</h3>';
+        
+        removeClass(categoriesList.children,'active')
       })
       .catch(error => console.log(error.message))
-      .finally(() =>loader2.classList.remove('d-block'))
-    }
+      .finally(() => loader2.classList.remove('d-block'))
+  }
 }
 
 export { getProducts, getProductsByCategoryId, getProductsByTerm }
