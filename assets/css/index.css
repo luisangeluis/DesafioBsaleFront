@@ -78,14 +78,16 @@ body {
   height: 23rem;
   transition: scale ease-out 300ms;
   width: 100%;
-  background-color: #57000035;
+  background-color: #57000040;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .card:hover{
   scale: 1.01;
   box-shadow: #a52026 solid 1px;
   border:.3 groove #212529;
+  background-color: #57000025;
 
 }
 .card-body{
